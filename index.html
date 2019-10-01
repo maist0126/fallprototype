@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>height 100%</title>
+    <style>
+        html,body {
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        #div2 {
+            float: left;
+            position: relative;
+            width: 47%;
+            height: 100%;
+            background-color: #1C0B4F;
+            z-index: 0;
+        }
+        #div3 {
+            float: left;
+            position: relative;
+            width: 23%;
+            height: 100%;
+            background-color: #120935;
+            z-index: -1;
+        }
+        #div1 {
+            float: left;
+            position: relative;
+            width: 30%;
+            height: 100%;
+            background-color: #2F1982;
+            box-shadow: 2px 0px 2px 0px #101010;
+            z-index: 1;
+        }
+        #heading{
+            text-align: center;
+            font-size: 12px;
+            color: #9B9B9B;
+
+            z-index: 1;
+            
+        }
+        #title{
+            margin-top: 10px;
+            text-align: center;
+            font-size: 20px;
+            color: #ffffff;
+            font-weight: 700;
+            z-index: 1;
+        }
+        img {
+            border-radius: 50%;
+            box-shadow: 0 2px 3px #ccc;
+        }
+        #user1{
+            position: absolute;
+            top: 20%;
+            left: 90%;
+            transform: translate(-50%,-50%);
+            z-index: 2;
+        }
+        #button{
+            position: absolute;
+            background-color: #ffffff;
+            top: 25%;
+            left: 75%;
+            transform: translate(-50%,-50%);
+            padding: 20px;
+            z-index: 2;
+        }
+        #center{
+            position: absolute;
+            background-color: #000000;
+            width:45%;
+            top: 50%;
+            left: 55%;
+            transform: translate(-50%,-50%);
+            padding: 20px;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+    <div id = "div1">
+    </div>
+    <div id = "div2">
+    </div>
+    <div id = "div3">
+    </div>
+    <div id = "center">
+        <div id = "heading">
+                회의 주제
+        </div>
+        <div id = "title">
+            졸업 전시 후원을 위한 아이디어 회의
+        </div>
+    </div>
+    <div id = "user1">
+        <img src = "./src/img/1.jpg" width="100px" height="100px"/>
+    </div>
+    <div id = "button">
+            발언 예약
+    </div>
+    <script>
+        document.getElementById("button").addEventListener('click', function a() {
+            console.log('a');
+            document.getElementById('user1').style.left = '38%';
+        });
+    </script>
+</body>
+</html>
