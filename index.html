@@ -57,14 +57,64 @@
         #user1{
             position: absolute;
             top: 20%;
-            left: 90%;
+            left: 85%;
             transform: translate(-50%,-50%);
             z-index: 2;
         }
-        #button{
+        #user2{
+            position: absolute;
+            top: 40%;
+            left: 93%;
+            transform: translate(-50%,-50%);
+            z-index: 2;
+        }
+        #user3{
+            position: absolute;
+            top: 60%;
+            left: 85%;
+            transform: translate(-50%,-50%);
+            z-index: 2;
+        }
+        #user4{
+            position: absolute;
+            top: 80%;
+            left: 93%;
+            transform: translate(-50%,-50%);
+            z-index: 2;
+        }
+
+        #button1{
             position: absolute;
             background-color: #ffffff;
-            top: 25%;
+            top: 20%;
+            left: 75%;
+            transform: translate(-50%,-50%);
+            padding: 10px;
+            z-index: 2;
+        }
+        #button2{
+            position: absolute;
+            background-color: #ffffff;
+            top: 75%;
+            left: 30%;
+            transform: translate(-50%,-50%);
+            padding: 20px;
+            z-index: 2;
+        }
+        #button4{
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            top: 20%;
+            left: 75%;
+            transform: translate(-50%,-50%);
+            padding: 10px;
+            z-index: 2;
+        }
+        #button3{
+            position: absolute;
+            background-color: #ffffff;
+            top: 75%;
             left: 75%;
             transform: translate(-50%,-50%);
             padding: 20px;
@@ -100,13 +150,45 @@
     <div id = "user1">
         <img src = "./src/img/1.jpg" width="100px" height="100px"/>
     </div>
-    <div id = "button">
+    <div id = "user2">
+        <img src = "./src/img/2.png" width="100px" height="100px"/>
+        </div>
+    <div id = "user3">
+        <img src = "./src/img/3.png" width="100px" height="100px"/>
+    </div>
+    <div id = "user4">
+        <img src = "./src/img/4.png" width="100px" height="100px"/>
+    </div>
+    <div id = "button1">
             발언 예약
     </div>
+    <div id = "button2">
+            발언 예약2
+    </div>
+    <div id = "button3">
+            발언 예약
+    </div>
+    <div id = "button4">
+            예약 취소
+    </div>
     <script>
-        document.getElementById("button").addEventListener('click', function a() {
-            console.log('a');
+        document.getElementById("button1").addEventListener('click', function () {
             document.getElementById('user1').style.left = '38%';
+            document.getElementById("button1").style.display = 'none';
+            document.getElementById("button4").style.display = 'block';
+        });
+        document.getElementById("button2").addEventListener('click', function () {
+            document.getElementById('user2').style.left = '53%';
+            document.getElementById('user2').style.top = '20%';
+        });
+        document.getElementById("button3").addEventListener('click', function () {
+            document.getElementById('user1').style.left = '68%';
+            document.getElementById('user3').style.top = '20%';
+        });
+        document.getElementById("button4").addEventListener('click', function () {
+            document.getElementById('user1').style.left = '85%';
+            document.getElementById("button4").style.display = 'none';
+            document.getElementById("button1").style.display = 'block';
         });
     </script>
 </body>
